@@ -25,9 +25,9 @@ green_line = 'http://i.imgur.com/gtEpbEm.png'
 blue_line = 'http://i.imgur.com/u3VO5jt.jpg'
 silver_line = 'http://i.imgur.com/IzGUM4H.jpg'
 
-routes = ['orange', 'red', 'silver', 'green', 'blue']
+routes = ['orange', 'red', 'blue', 'green-b', 'green-c', 'green-d', 'green-e']
 
-polling_interval = 120.0
+polling_interval = 200.0
 
 running = True
 
@@ -65,12 +65,18 @@ def slack(aid, route, text):
     if route == 'red': 
         SLACK_BOT_IMAGE = red_line
         SLACK_BOT_NAME = 'MBTA ALERT (RED LINE)'
-    if route == 'green': 
+    if route == 'green-b': 
         SLACK_BOT_IMAGE = green_line
-        SLACK_BOT_NAME = 'MBTA ALERT (GREEN LINE)'
-    if route == 'silver': 
-        SLACK_BOT_IMAGE = silver_line
-        SLACK_BOT_NAME = 'MBTA ALERT (SILVER LINE)'
+        SLACK_BOT_NAME = 'MBTA ALERT (GREEN LINE B)'
+    if route == 'green-c': 
+        SLACK_BOT_IMAGE = green_line
+        SLACK_BOT_NAME = 'MBTA ALERT (GREEN LINE C)'
+    if route == 'green-d': 
+        SLACK_BOT_IMAGE = green_line
+        SLACK_BOT_NAME = 'MBTA ALERT (GREEN LINE D)'
+    if route == 'green-e': 
+        SLACK_BOT_IMAGE = green_line
+        SLACK_BOT_NAME = 'MBTA ALERT (GREEN LINE E)'
     if route == 'blue': 
         SLACK_BOT_IMAGE = blue_line
         SLACK_BOT_NAME = 'MBTA ALERT (BLUE LINE)'
